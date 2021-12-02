@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.main {
+    width: 1200px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background-color: #333;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0 8px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 48px;
+    padding: 14px;
+}
+.nav__link:hover{
+    background-color: rgb(51, 95, 95);
+}
+
+/* Article */
+h1 {
+    line-height: 2rem;
+}
+
+article {
+    padding: 0 16px;
+    line-height: 1.6rem;
+}
+
+article img {
+    width: 640px;
+    max-width: 100%;
+    display: block;
+    margin: 32px auto;
+}
+
+/* MEnu*/
+.nav_bars-btn{
+    color: #fff;
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav__overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+.nav__moble{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    max-width: 100%;
+    background-color: #fff;
+    transition: transform linear 0.2s, opacity linear 0.2s;
+}
+.nav__overlay.open{
+    display: block;
+}
+.nav__moble-list{
+    margin-top: 36px;
+    margin-left: 12px;
+    list-style: none;
+}
+.nav__moble-list li:first-child{
+    border-top: 1px solid #eee;
+}
+.nav__moble-link{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+    font-size: 1.4rem;
+}
+.close{
+    font-size: 1.4rem;
+    color: #333;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.nav__input:checked ~ .nav__overlay{
+    display: block;
+}
+.nav__input:checked ~ .nav__moble{
+    transform: translateX(0);
+    opacity: 1;
+}
+@media (max-width: 1023px){
+    .nav_bars-btn{
+        display: block;
+        margin-left: 12px;
+    }
+    .nav__pc{
+        display: none;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

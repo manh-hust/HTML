@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./menuRP.css">
+    <link rel="stylesheet" href="/shoppe/assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+<body>
+    <div class="main ">
+        <div class="nav">
+            <!-- Nav PC -->
+            <nav class="nav__pc">
+                <ul class="nav__list">
+                    <li>
+                        <a href="" class="nav__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="" class="nav__link">About</a>
+                    </li>
+                    <li>
+                        <a href="" class="nav__link">Category</a>
+                    </li>
+                    <li>
+                        <a href="" class="nav__link">News</a>
+                    </li>
+                    <li>
+                        <a href="" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav_bars-btn js-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div   class="nav__overlay js-open ">
+                <nav class="nav__moble open js-noclick">
+                    <div class="close js-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <ul class="nav__moble-list">
+                        <li>
+                            <a href="" class="nav__moble-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__moble-link">About</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__moble-link">Category</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__moble-link">News</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__moble-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <article>
+            <h1>Hơn 100 học sinh biết bơi nhờ lớp dạy bơi miễn phí của những thanh niên tốt bụng</h1>
+            <p><strong>Hai năm nay, hai thanh niên ở xã Chư Đăng Ya, huyện Chư Pah (Gia Lai) cùng với một số thanh niên khác của xã đã tự nguyện dạy bơi cho những học sinh bản địa. Nhờ có lớp học bơi này, hơn 100 học sinh ở xã đã biết bơi, có thêm kỹ năng sinh tồn ở vùng đất thường có nước dữ vào mùa mưa.</strong></p>
+            <p>Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100 triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho người đánh rơi vào chiều ngày 28.10.2019 vẫn đang được nhiều người nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.</p>
+            <img src="https://www.thanhxuan.gov.vn/portal/khuongdinh/Photos/2015-09/2d3d8ef817831f3dT%E1%BA%B7ng%20qu%C3%A0%20cho%20tr%E1%BA%BB%20em%20Thu%20L%C5%A9m-%20Lai%20Ch%C3%A2u.JPG" alt="">
+            <p>Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100 triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho người đánh rơi vào chiều ngày 28.10.2019 vẫn đang được nhiều người nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.</p>
+            <img src="https://tttd.ex-cdn.com/files/f2/documents/10184/5227700/IMG_5661.jpg" alt="">
+            <p>Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100 triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho người đánh rơi vào chiều ngày 28.10.2019 vẫn đang được nhiều người nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.</p>
+            <img src="http://danvan.vn/Uploads/2017/9/15/quangyen040917.jpg" alt="">
+            <p>Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100 triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho người đánh rơi vào chiều ngày 28.10.2019 vẫn đang được nhiều người nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.</p>
+        </article>
+    </div>
+    <script>
+         const open = document.querySelector('.js-open')
+         const btn = document.querySelector('.js-btn')
+         const close = document.querySelector('.js-close')
+         const noClick = document.querySelector('.js-noclick')
+
+         function hiden(){
+            open.classList.remove('open')
+        }
+
+        function show(){
+            open.classList.add('open')
+        }
+        btn.addEventListener('click',show)
+
+        close.addEventListener('click',hiden)
+
+        open.addEventListener('click',hiden)
+       
+        noClick.addEventListener('click', function(event){
+            event.stopImmediatePropagation()
+        })
+</script>
+</body>
+</html>

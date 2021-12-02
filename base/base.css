@@ -1,0 +1,19 @@
+:root{
+    --primary-color:#EE4D2D;
+    --while-color:rgb(253, 253, 253);
+    --black-color: #000;
+    --text-color:#333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62,5%;
+    line-height: 1.6rem; 
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+

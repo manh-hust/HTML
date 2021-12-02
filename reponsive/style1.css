@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item{
+    margin-top: 12px;
+    font-size:  40px;
+    color: #fff;
+    text-align: center;
+    min-height: 180px;
+    line-height: 190px;
+    background-color: orange;
+}
+.main{
+    display: flex;
+    padding: 0 32px;
+}
+.sidebar{
+    width: 300px;
+    background-color: violet;
+}
+.content{
+    flex: 1;
+    background-color: bisque;
+}
+@media(max-width: 739px){
+    .hide-on-mobile{
+        display: none;
+    }
+}
+@media(min-width: 740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+}
