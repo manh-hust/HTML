@@ -20,6 +20,16 @@ button{
     cursor: pointer;
     border: none;
 }
-input{
+input, textarea{
     border: none;
+}
+::-webkit-input-placeholder { /* Edge */
+    color: #fff;
+  }
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #858585;
+    border-radius: 10px;
 }
