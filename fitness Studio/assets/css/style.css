@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Roboto',sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 18px;
+    background-color: var(--color_0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.navbar__content{
+    display: flex;
+}
+.navbar__content__item{
+    margin: 0 12px;
+    font-weight: 100;
+    color: #fff;
+}
+.navbar__contact{
+    display: flex;
+}
+.navbar__contact__item{
+    margin: 0 8px;
+    color: var(--color_2);
+}
+.text1{
+    color: var(--color_1);
+}
+/* App */
+.app{
+    position: relative;
+    top: 0;
+    align-items: center;
+    height: 100vh;
+}
+.app-background{
+    width: 100%;
+    height: 100vh;
+    background-image: 
+    linear-gradient(0, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url(https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zml0bmVzc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60)
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Home*/
+.home{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.home__container{
+    height: 100%;
+    width: 720px;
+}
+.home__title{
+    font-size:2.5rem;
+    color: #fff;
+    padding: 6px;
+    margin-bottom: 12px;
+}
+.home__note{
+    color: #fff;
+    letter-spacing: 3px;    
+    font-size: 1.3rem;
+    padding: 6px;
+    margin-bottom: 12px;
+}
+.home__btn {
+}
+.btn--book{
+    color: #fff;
+    padding: 12px 48px;
+    background-color: transparent;
+    border: 3px solid #fff;
+    transition: all ease 0.25s;
+}
+.btn--book:hover{
+    background-color: var(--color_1);
+    color: var(--color_2);
+}
+/* About */
+.about{
+    height: 110vh;
+    width: 100%;
+    background-color: var(--color_3);
+    padding: 80px 200px 100px;
+    text-align: center;
+    color: #fff;
+    /* display: flex; */
+}
+.about__title{
+    margin: 50px 0 48px;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    letter-spacing: 8px;
+}
+.about__note{
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+.about__para{
+    width: 560px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-weight: 300;
+}
+.about__para-top{
+    margin-bottom: 32px;
+}
+.about__para-bot{
+}
+
+/* Instructor */
+.instructor{
+    /* height: 100vh; */
+    width: 100%;
+    background-color: var(--color_4);
+    padding: 80px 200px 100px;
+    text-align: center;
+    color: var(--color_3);
+}
+.instructor__title{
+    margin: 50px 0 64px;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    letter-spacing: 8px;
+}
+.instructor__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.instructor__content-item{
+    width: 280px;
+    margin: 0 32px;
+}
+.instructor__content-item-img{
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+}
+.instructor__content-item-content{
+    margin: 32px 0;
+}
+.instructor__content-item-content h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.instructor__content-item-content h2{
+    font-size:medium;
+    font-weight: 300;
+    margin-top: 12px;
+}
+.instructor__content-item-para{
+    font-weight: 300;
+    word-spacing: 2px;
+    padding: 0 4px;
+}
+
+/* Wake up and*/
+.wake-work{
+    width: 100%;
+    background-color: var(--color_5);
+    padding: 80px 200px 100px;
+    text-align: center;
+    color: var(--color_3);
+    height: 50vh;
+}
+.wake-work__title{
+    margin: 50px 0 40px;
+    font-size: 2.4rem;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+.wake-work__content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wake-work__content-text{
+    text-align: justify;
+}
+.wake-work__content-text h2{
+    margin-bottom: 8px;
+}
+.wake-work__content-phone{
+    display: flex;
+    align-items: flex-end;
+}
+.wake-work__content-phone input{
+    border-bottom: 2px solid var(--color_3);
+    background-color: var(--color_5);
+    padding: 6px;
+    font-size: 1rem;
+    text-align: center;
+}
+.wake-work__content-phone-inputS{
+    width: 60px;
+    margin-right: 4px;
+}
+.wake-work__content-phone button {
+    margin-left: 6px;
+    color: #fff;
+    background-color: var(--color_3);
+    padding: 12px 32px;
+}
+.wake-work__content-phone button:hover{
+    opacity: 0.8;
+}
