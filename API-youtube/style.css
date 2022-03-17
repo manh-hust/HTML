@@ -1,0 +1,32 @@
+.container-main {
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.monitor {
+    box-sizing: content-box;
+    height: 270px;
+    width: 480px;
+    border: 1rem black solid;
+    position: absolute;
+    cursor: move;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    border-radius: 1rem;
+}
+
+.active {
+    display: block;
+}
+
+.icon {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+}
+
+.icon:hover {
+    cursor: pointer;
+}

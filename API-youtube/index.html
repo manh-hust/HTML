@@ -9,16 +9,17 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container container-main">
         <form class="mt-5 mb-5">
             <div class="form-group">
                 <label for="search">Mini Youtube</label>
                 <input class="form-control" id="search">
             </div>
-            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="submit" class="btn btn-primary btn-submit">Search</button>
         </form>
         <div class="row">
             <div class="col-3">
@@ -28,43 +29,12 @@
             </div>
         </div>
     </div>
+    <!-- Monitor Mini -->
+    <div class="monitor">
+        <div class="icon"><img src="https://lifo-95316.web.app/assets/close.591243d3.svg" alt=""></div>
+    </div>
 
-    <script>
-        $(document).ready(function () {
-            var API_KEY = "AIzaSyBLGK2UiUeT0vwNMMkTSE4Marp3Nz2eovI"
-            var video = ''
-
-            $('form').submit(function (e) {
-                e.preventDefault()
-
-                var search = $("#search").val()
-
-                videoSearch(API_KEY, search, 10)
-            })
-
-            function videoSearch(key, search, max) {
-                $.get("https://www.googleapis.com/youtube/v3/search?key=" + key +
-                    "&type=video&part=snippet&maxResults=" + max + "&q=" + search,
-                    function (data) {
-                        console.log(data)
-                        data.items.forEach(item => {
-                            video = `
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="${item.snippet.thumbnails.medium.url}" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">${item.snippet.title}</h5>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                            `
-                            $("#videos").append(video)
-                        });
-
-
-                    })
-            }
-        })
-    </script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
