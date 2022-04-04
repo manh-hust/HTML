@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(255, 0, 21);
+            transition: opacity 0.5s linear, width 0.5s, transform 0.5s;
+        }
+       
+       .box:hover{
+            background-color: blueviolet;
+            opacity: 0.5;
+            width: 400px;
+            transform: scale(0.5);
+            transform: rotate(180deg);
+            right: -200px;
+
+        }
+        @keyframes max{
+            from{
+                transform: rotate(0deg);
+                transform: scale(0.5);
+            }
+            to{
+                transform: rotate(180deg);
+                transform: scale(1);
+            }
+        }
+        .run{
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(243, 247, 242);
+            margin-top: 48px;
+            animation: style linear 4s -2s;
+          /*  animation-iteration-count: infinite;*/
+            transition: width 0.5s, transform 0.5s;
+            animation-direction: alternate;
+        }
+        .run:hover{
+            width: 300px;
+            transform: rotate(360deg);
+        }
+
+        @keyframes style{   
+            0%{background-color:rgb(212, 245, 204) ; left: 0px; top: 0px;}
+            25%{background-color:rgb(164, 250, 142) ;left: 90%; top: 0px;}
+            50%{background-color:rgb(108, 247, 73) ; left: 90%;; top: 200px;transform: rotate(360deg);}
+            75%{background-color:rgb(54, 248, 6) ; top: 200px; left: 0px;}
+        }   
+        .running{
+            position: relative;
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+            margin: 40px 0;
+            animation-iteration-count:infinite;
+            animation: speed linear 3s;
+        }
+        @keyframes speed{
+            0%{top: 0 ;left:0}
+            100%{top: 0 ; left: 90%;}
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="box">
+    </div>
+    <div class="run">
+    </div>
+    <div class="running"></div>
+    <div class="running"></div>
+    <div class="running"></div>
+    <div class="running"></div>
+</body>
+</html>

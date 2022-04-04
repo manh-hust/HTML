@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+html{
+    width:  100%;
+    height: 100%;
+}
+:root{
+    background-color: #f2f2f2;
+}
+.nav{
+    width: 100%;
+    min-height: 42px;
+    background-color: #EF5122;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-list{
+    padding-left: 0;
+    margin: auto 16px;
+}
+.nav-item{
+    color: #fff;
+    list-style: none;
+    margin:  0 15px;
+    display: inline-block;
+}
+.form-container{
+    max-width: 720px;
+    padding: 32px;
+    margin: 36px auto 0 auto;
+    background-color: #fff;
+}
+.form_row{
+   padding: 8px 0;
+    display: flex;
+}
+.form_input{
+    flex: 5;
+}
+.form_label{
+    flex: 1;
+}
+.column-layout{
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color:  rgb(69, 203, 212);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* space-around : cách lề bằng 1 nửa cách nhau
+       space-evely  : cách lề bằng cách nhau
+       space-between: không cách lề nhưng cách nhau */
+}
+@media(min-width: 740px){
+    .column-layout{
+        flex-direction: row;
+    }
+}
+.column-item{
+    padding: 0 16px;
+    flex-basis: 25%;               /* căn độ rộng cho item con bên trong */
+}
+.sidebar-one{
+    background-color: aqua;
+}
+.sidebar-tow{
+    background-color: antiquewhite;
+}
+.main-column{
+    background-color: burlywood;
+}
+.wap-container{
+    background-color: #6cced1;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Thu bé vào tự căn chỉnh xuống dòng
+        Wrap-reverse : Ngược với cái bên trên 
+    */
+}
+.wap-item{
+    width: 148px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 20px;
+    background-color: #EF5122;
+}
+.chart-layout{
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height:  320px;
+    background-color: #6cced1;
+    display: flex;
+    align-items: flex-end;
+    /*
+    Đổi chiều item
+    */
+    justify-content: space-around;
+}
+.chart-layout_item{
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent);
+    background-color: #EF5122;
+    animation: growth ease-in 0.5s;
+}
+@keyframes growth{
+    from{
+        opacity: 0;
+        height: calc(var(--percent)-50%);
+    }
+    to{
+        opacity: 1;
+        height: var(--percent);
+    }
+}
+.end-container{
+    max-width: 760px;
+    min-height: 400px;
+    margin: 32px auto 48px auto;
+    background-color: #6cced1;
+    padding: 36px ;
+    display:  flex;
+    flex-direction: row-reverse;
+}
+.end-item1{
+    padding: 20px 12 px;
+    background-color: #EF5122;
+    flex: 1;
+}
+.end-item2{
+    background-color: #fff;
+    flex: 1;
+    flex-direction: column-reverse;
+    /*
+    Chuyển ngang thành dọc, trên thanh dưới.
+    */
+    display: flex;
+}
+.end-item21{
+    padding: 20px 12px;
+    background-color: crimson;
+    flex: 1;
+
+}
+.end-item22{
+    padding: 20px 12px;
+    background-color: rgb(182, 103, 114);
+    flex: 1;
+
+}
+
+/*
+1. Dislay: flex   Xếp thành 1 hàng ngang cho các item bên trong
+
+2. Flex: 1  Chia tỉ lệ cho các con bên trong container
+
+3. flex-direction: row(Hàng), column(Cột)  + -reverse: Đảo chiều sắp xếp các item lại
+
+4. align-item : flex-end  : Lộn cái cột trong đồ thị lại
+
+5. flex-basis : Căn độ rộng cho từng item bên trong
+
+6. flex-wrap: wrap(-reverse--> Theo chiều ngược lại)  : Khi thu nhỏ tab lại sẽ tự chuyển các item xuống dòng 
+
+7. justify-content: -space-beetwen : Đẩy các item về sát mép, căng giữa
+                    -space-around  : Căn cả lề và lề băng 1/2 khoảng cách các item ở giữa
+                    -space-evelin  : Căn bằng nhau tại mọi điểm.
+    align-content: Giống cái align-item , chỉ khác là lúc xuống dòng thì không cách
+
+8. order: item đc chỉ định bị đẩy xuống cuối cùng
+
+9. flex-sefl : item đc chỉ định thực hiện các thuộc tính riêng lẻ
+
+10. flex-bow : item đc chỉ định sẽ lấp đầy các chỗ container trống
+*/
+
+/*      Tricks
+1. Height: max - content: Độ rộng khung kéo theo chiều dài của dòng chữ ( Trên 1 hàng thui 1).
+   Height: min - content: Độ rộng khung kéo theo độ dài của từ dài nhất.
+   Height: fit - content: Rớt xuống hàng cân đối.
+
+2. Tạo dấu ... khi dòng text quá dài nhưng chỉ trên 1 dòng
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+*/
+
+

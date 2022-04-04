@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            height: 450px;
+            background-color: beige;
+            padding: 18px;
+            display: flex;
+            align-content: space-around;
+            justify-content:center;
+            flex-wrap: wrap;
+        }
+        .item{
+            height: 100px;
+            width: 100px;
+            margin: 8px 12px;
+        }
+        #red{
+            background-color: red;
+            
+        }
+        #green{
+            background-color: green;
+        }
+        #blue{
+            background-color: blue;
+            order: 2;
+        }
+        #chocolate{
+            background-color: chocolate;
+        }
+        .font{
+            font-size: 60px;
+            text-align: center;
+            line-height: 100px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item font item1" id="red">1</div>
+        <div class="item font" id="green">2</div>
+        <div class="item font" id="blue">3</div>
+        <div class="item font" id="red">4</div>
+        <div class="item font" id="green">5</div>
+        <div class="item font" id="blue">6</div>
+        <div class="item font" id="chocolate">7</div>
+    </div>
+
+</body>
+</html>

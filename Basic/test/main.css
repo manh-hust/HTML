@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+input{
+    outline: none;
+}
+.container{
+    background-color: rgb(248, 125, 10);
+    width: 100%;
+    height: 104px;
+    display: flex;
+    align-items: flex-start;
+}
+.container__list{
+    padding: 12px;
+    position: relative;
+}
+.container__item{
+    display: inline-block;
+    padding: 0 12px;
+}
+.container__item1:hover{
+    opacity: 0.8;
+}
+.container__item-style{
+    text-decoration: none;
+    color: #fff;
+    user-select: none;
+}
+.container__item-icon{
+    padding-left: 4px;
+}
+/*  Bảng thông báo */
+.container__thoba{
+    width: 220px;
+    height: 404px;
+    padding: 6px 0 0 0;
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    right: 35%;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    border: 1px solid  #D3D3D3;
+    animation: headerNotiGrowth ease-in 0.2s;
+    cursor: pointer;
+    transform-origin: calc(100% - 20px) top ;
+}
+@keyframes headerNotiGrowth{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.container__item-thoba--animation:hover .container__thoba{
+    display: flex;
+}
+.container__thoba-title{
+    color: rgb(165, 161, 161);
+    height: 1px;
+    flex: 1; 
+    padding: 0 0 0 6px;
+    cursor: default;
+}
+.container__thoba-naiyou{
+    background-color: rgb(248, 212, 234);
+    flex: 12;
+}
+.container__thoba-btn{
+    border: none;
+    min-height: 30px;
+    cursor: pointer;
+}
+
+/* input nhập tên */
+
+.container__item-inputname{
+    position: absolute;
+    height: 160px;
+    background-color: rgb(255, 255, 255);
+    padding: 12px;
+    border: solid 1px #f2f2f2 ;
+    display: block;
+    width: 240px;
+    display: none;
+    animation: headerNotiGrowth ease-in 0.2s;
+}
+.container__item-input:hover .container__item-inputname{
+    display: block;
+}
+.container__item-input{
+    border-color: rgb(240, 240, 240);
+    height: 28px;
+    width: 220px;
+    padding-left: 12px;
+    margin-top: 30px;
+}
+.container__item-input:focus{
+    border-color: rgb(52, 170, 238);
+}
+.container__item-label{
+    position: absolute;
+    top:31%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #c2c1c1;
+    border-color: #fff;
+}
+
+.container__item-input:not(:placeholder-shown)+ .container__item-label,
+.container__item-input:focus + .container__item-label{
+    top: 20%;
+    padding: 6px;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(52, 170, 238);
+    color: rgb(52, 170, 238);
+}
+.container__item-input1{
+    border-color: rgb(240, 240, 240);
+    height: 28px;
+    width: 220px;
+    padding-left: 12px;
+    margin-top: 30px;
+}
+.container__item-input1:focus{
+    border-color: rgb(52, 170, 238);
+}
+.container__item-label1{
+    position: absolute;
+    top:65%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #c2c1c1;
+    border-color: #fff;
+}
+.container__item-input1:not(:placeholder-shown)+ .container__item-label1,
+.container__item-input1:focus + .container__item-label1{
+    top: 54%;
+    padding: 6px;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(52, 170, 238);
+    color: rgb(52, 170, 238);
+}

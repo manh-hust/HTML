@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button-Bem</title>
+    <style>
+        *{
+            padding:  0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        div{
+            margin: 236px;
+        }
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            min-width: 100px;
+            padding: 12px 48px;
+            border-radius: 10px;        /*Border kiểu tròn tròn*/
+            cursor: pointer;            /*Con trỏ chuột hình bàn tay*/
+            transition: opacity 0.2s ease; /*Hiệu ứng cho đổi màu trễ lại*/
+            box-shadow: -1px -1px  inset rgb(211, 203, 203);
+        }
+        .btn:hover{
+            opacity: 0.8;      /* Độ đục của màu*/
+        }
+        .btn +.btn{
+            margin-left: 16px;  /*Các nút liền sau sẽ cách ra*/
+        }
+        .btn--success{
+            background-color: #71be34 ;
+        }
+        .btn--warn{
+            background-color: #ffb702;
+        }
+        .btn--danger{
+            background-color: #ff623d;
+        }
+        .btn--disable{
+            opacity: 0.9 !important;
+            cursor: default;
+        }
+        .btn--size-l{
+            padding: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="btn btn--success btn--disable">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--warn ">OK</button>
+        <button class="btn btn--danger btn--size-l">TRY AGAIN</button>
+    </div>
+</body>
+</html>

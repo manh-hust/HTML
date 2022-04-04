@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <style>
+        input{
+            line-height: normal;
+        }
+        body{
+            padding: 20px;
+            margin: 30px;
+        }
+        .form-field{
+            position: relative;
+        }
+        .form-input{
+            border: 1px solid #eee;
+            width: 50%;
+            height: 50px;
+            padding: 0 20px; 
+            transition: 0.25s ease;
+            border-radius: 4px;            
+        }
+        .form-input:focus{
+            border-color: #6a5af9;
+        }
+        .form-label{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 21px;
+            user-select: none;
+            color: rgb(189, 184, 184);
+            pointer-events: none;
+        }
+        .form-input:focus + .form-label{
+            top: 0;
+            padding: 10px;
+            display: inline-block;
+            background-color: while;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-field">
+        <input type="text" class="form-input">
+        <label for="name" class="form-label">Name</label>
+    </div>
+</body>
+</html>

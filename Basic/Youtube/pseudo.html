@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peseudo</title>
+    <style>
+        html{
+            width: 100%;
+            height: 100%;
+        }
+     
+        div{
+            width: 100%;
+            height: 120px;
+            background-color:rgba(211, 191, 191, 0.8);
+        }
+        div:active{
+            background-color: black;
+        }
+        div:hover{
+            height: 150px;
+        }
+
+        li:first-child{
+            color: brown;
+            font-family: sans-serif;
+            padding: 5px;
+        }
+        li:last-child{
+            text-align: center;
+            width: 8%;
+            height: 50px;
+            color: violet;
+            padding: 5px;
+            border: solid black 2px;
+        }
+        .he::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 50px;
+            background-color: orange;
+            border: 2px solid black;
+        }
+        .he::before{
+            content: "";
+            display: block;
+            width: 100%px;
+            height: 50px;
+            background-color:orange;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="he">
+    </div>
+
+    <p>
+        Font-end
+    </p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascrip</li>
+        </ul>
+ 
+</body>
+</html>

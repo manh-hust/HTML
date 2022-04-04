@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto",sans-serif;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 980px;
+    margin: 0 auto;
+}
+header{
+    width: 980px;
+    height: 100px;
+    background-color: #cb7802;
+}
+header img{
+    padding-left: 30px;
+    padding-top: 10px;
+}
+.img-slide{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+nav{
+    height: 35px;
+    background-color: #272f54;
+    margin-bottom: 5px;
+}
+nav .menu ul{
+    list-style: none;
+}
+nav .menu ul li{
+    float: left;
+    line-height: 35px;
+    padding: 0 15px;
+}
+nav .menu ul a{
+    color:  #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+nav .menu ul a:hover{
+    color: aquamarine;
+}
+nav .seach{
+    line-height: 35px;
+    float: right;
+    margin-right: 25px;
+}
+nav .seach button:hover{
+    background-color: rgb(85, 197, 231);
+}
+
+
+article{
+    width: 100%;
+    height: 450px;
+    margin-bottom: 10px;
+    display: block;
+}
+article h3{
+   text-align: center;
+   color: cornflowerblue;
+   padding-bottom: 10px;
+   text-transform:uppercase;
+}
+article .New-List{
+    width: 100%;
+    height: 25rem;
+    margin:auto;
+}
+article .New-List .New-Item{
+    width: 29%;
+    height: auto;
+    float: left;
+    padding: 10px;
+    border: 1px solid #f2f2f2;
+    margin:0 12px;
+}
+article .New-List .New-Item h4{
+    height: 35px;
+    font-size: 90%;
+    color: crimson;
+}
+article .New-List .New-Item img{
+    max-height:188px; 
+    padding-bottom: 10px;
+
+}
+#h3-Go{
+    height: 41.6px;
+    box-sizing: border-box;
+}
+footer{
+    width: 40rem;
+    height: 50px;
+    background-color:#6d81dd;
+    margin: auto;
+    line-height: 50px;
+    text-align: center;
+    color: #f2f2f2;
+}
